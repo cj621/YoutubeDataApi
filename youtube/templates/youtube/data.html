@@ -1,0 +1,12 @@
+{% if youtube_videos %}
+    <ul>
+    {% for video in youtube_videos %}
+        <li><a href="/youtube/{{ video.yt_video_id }}">{{ video.yt_video_title }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+	<p>No Videos available for this channel.</p>
+{% endif %}
+
+<br />
+<a href="/youtube/">Jump to Login</a>    

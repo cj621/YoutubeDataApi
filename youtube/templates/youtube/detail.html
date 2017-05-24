@@ -1,0 +1,20 @@
+{% if yt_video_details %}
+    
+    {% for video in yt_video_details %}
+        <h2>Video Title : {{ video.yt_video_title }} </h2>
+        <h4>Video ID : {{ video.yt_video_id }} </h4>
+        <h4>Video Description :</h4><h5> {{ video.yt_video_description }} </h5>
+
+    {% endfor %}
+    
+{% endif %}
+
+<br />
+<br />
+
+{% for video in yt_video_details %}
+  <a href="/youtube/?view={{video.yt_channel_id}}">List of Videos</a></li>     
+{% endfor %}
+
+<br/>
+<a href="/youtube/">Jump to Login</a>
